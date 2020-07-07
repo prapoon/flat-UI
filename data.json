@@ -1,0 +1,56 @@
+[{
+    "id": 1,
+    "description":"Ballerina Flats",
+    "colors": [
+        "#FACA9B",
+        "#FDD09F",
+        "#F3D89F",
+        "#E7DF86",
+        "#C0BA78",
+        "#212529"
+      ]
+},
+{
+    "id": 2,
+    "description":"Flat Earth",
+    "colors": [
+        "#59A9C2",
+        "#65878F",
+        "#6E5D4B",
+        "#6A5A15",
+        "#61381B"
+      ]
+},
+{
+  "id": 3,
+  "description":"Flat Earth",
+  "colors": [
+      "#59A9C2",
+      "#65878F",
+      "#6E5D4B",
+      "#6A5A15",
+      "#61381B"
+    ]
+},
+{
+  "id": 4,
+  "description":"Flat Earth",
+  "colors": [
+      "#59A9C2",
+      "#65878F",
+      "#6E5D4B",
+      "#6A5A15",
+      "#61381B"
+    ]
+},
+{
+  "id": 5,
+  "description":"That Retro Flat",
+  "colors": [
+      "#4CD4B0",
+      "#65878F",
+      "#EDD834",
+      "#F24D16",
+      "#7D1424"
+    ]
+}]
