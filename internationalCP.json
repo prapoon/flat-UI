@@ -3,8 +3,8 @@
     "id": 1,
     "description":"Normal Color Palette",
     "colors": [
-        "#FFFFFF",
         "#C0C0C0",
+        "#FFFFFF",
         "#808080",
         "#000000",
         "#FF0000",
