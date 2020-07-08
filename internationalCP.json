@@ -1,5 +1,48 @@
-[{
+[
+    {
     "id": 1,
+    "description":"Normal Color Palette",
+    "colors": [
+        "#696969",
+        "#bada55",
+        "#7fe5f0",
+        "#ff0000",
+        "#ff80ed",
+        "#407294",
+        "#cbcba9",
+        "#ffffff",
+        "#420420",
+        "#133337",
+        "#065535",
+        "#c0c0c0",
+        "#5ac18e",
+        "#666666",
+        "#000000"
+      ]
+    },
+    {
+    "id": 2,
+    "description":"Normal Color Palette V2",
+    "colors": [
+        "#dcedc1",
+        "#f7347a",
+        "#576675",
+        "#ffc0cb",
+        "#ffe4e1",
+        "#696966",
+        "#00ffff",
+        "#ffa500",
+        "#e6e6fa",
+        "#ffd700",
+        "#008080",
+        "#d3ffce",
+        "#f0f8ff",
+        "#0000ff",
+        "#003366"
+      ]
+    },
+    {
+    "id": 3,
     "description":"British Palette V1",
     "colors": [
         "#00a8ff",
@@ -15,7 +58,7 @@
       ]
 },
 {
-    "id": 2,
+    "id": 4,
     "description":"British Palette V2",
     "colors": [
         "#e84118",
@@ -31,7 +74,7 @@
       ]
 },
 {
-    "id": 3,
+    "id": 5,
     "description":"Canadian Color Palette V1",
     "colors": [
         "#ff9ff3",
@@ -47,7 +90,7 @@
       ]
 },
 {
-  "id": 4,
+  "id": 6,
   "description":"Canadian Color Palette V2",
   "colors": [
       "#00d2d3",
@@ -63,7 +106,7 @@
     ]
 },
 {
-  "id": 5,
+  "id": 7,
   "description":"Chinese Color Palette V1",
   "colors": [
       "#eccc68",
@@ -79,7 +122,7 @@
     ]
 },
 {
-  "id": 6,
+  "id":8,
   "description":"Chinese Color Palette V2",
   "colors": [
       "#7bed9f",
