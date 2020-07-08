@@ -8,12 +8,15 @@
     <link rel="stylesheet" href="assets/css/flat-ui.css" type="text/css">
     <link rel="stylesheet" href="assets/css/demo.css" type="text/css">
     <style>
+        select>option:focus {
+            border-radius: 50%;
+        }
     </style>
 </head>
 
-<body id="bgColor">
+<body id="bodyColor">
     <nav class="navbar navbar-expand-lg navbar-light" id="navBarColor" style="background-color: #D9F5BE;">
-        <a class="navbar-brand" href="index.html">Flat Color</a>
+        <a class="navbar-brand" href="#">Flat Color</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -22,7 +25,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="Flaticon.html">Flat icons</a>
@@ -49,29 +52,56 @@
     <div class="container">
         <div class="form-row">
             <p>
-                Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph. A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). Length and appearance do not determine whether a section in a paper is a paragraph. For instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long. Ultimately, a paragraph is a sentence or group of sentences that support one main idea. In this handout, we will refer to this as the “controlling idea,” because it controls what happens in the rest of the paragraph.
+                Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a
+                paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality,
+                though, the unity and coherence of ideas among sentences is what constitutes a paragraph. A paragraph is
+                defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116).
+                Length and appearance do not determine whether a section in a paper is a paragraph. For instance, in
+                some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long.
+                Ultimately, a paragraph is a sentence or group of sentences that support one main idea. In this handout,
+                we will refer to this as the “controlling idea,” because it controls what happens in the rest of the
+                paragraph.
             </p>
-        </div>        
+        </div>
         <hr>
         <div class="form-row">
             <div class="form-group col-md-3">
-            <label for="nabBar">Navbar Color</label>
-            <input type="text" id="navBar" name="navBar" value="#40739E" placeholder="hex code/color name">
+                <label for="selectPalletes">Select Color Palettes</label>
+                <select class="form-control" id="selectPalletes" onchange="selectPalletesHandler(this.value)">
+                    <option value="1">International color Palettes</option>
+                    <option value="2">Flat color palletes</option>
+                </select>
             </div>
             <div class="form-group col-md-3">
-            <label for="navBarText">Navbar Text</label>
-            <input type="text" id="navBarText" name="navBarText" value="#FBC531" placeholder="hex code/color name">
+                <label for="selectPalletesTypes">Select Color Palettes Types</label>
+                <select class="form-control" id="selectPalletesTypes" onchange="selectPalletesTypesHandler(this.value)">
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <label for="nabBar">Navbar Color</label>
+                <select class="form-control" id="nabBarColor">
+                </select>
             </div>
             <div class="form-group col-md-3">
-            <label for="bg">Background Color</label>
-            <input type="text" id="bg" name="bg" value="#8C7AE6" placeholder="hex code/color name">
+                <label for="navBarTextColor">Navbar Text</label>
+                <select class="form-control" id="navBarTextColor">
+                </select>
             </div>
             <div class="form-group col-md-3">
-            <label for="bgText">Background Text</label>
-            <input type="text" id="bgText" name="bgText" value="#4CD137" placeholder="hex code/color name">
+                <label for="backgroundColor">Background Color</label>
+                <select class="form-control" id="backgroundColor">
+                </select>
             </div>
-        </div>            
-        <button type="button" class="btn btn-primary" onclick="applyColor()">Apply Color</button>
+            <div class="form-group col-md-3">
+                <label for="backgroundTextColor">Background Text</label>
+                <select class="form-control" id="backgroundTextColor">
+                </select>
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="applyColors()">Apply Color</button>
+        <a class="btn btn-danger" href="#">Reset</a>
     </div>
     <script src="assets/js/jquery-3.5.1.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
@@ -79,25 +109,126 @@
     <script src="assets/js/FileSaver.min.js"></script>
 
     <script>
-        function applyColor(){
-            debugger;
+        var CPData = [];
+        var selectedCP = 1;
+        $(document).ready(function () {
+            selectPalletesHandler(1);
+        });
+
+        function selectPalletesHandler(selectedValue) {
+            var url = selectedValue == 1 ?
+                'https://raw.githubusercontent.com/prapoon/flat-UI/master/internationalCP.json'
+                : 'https://raw.githubusercontent.com/prapoon/flat-UI/master/flatcolor.json';
+
+            var selectPalletesTypes = document.getElementById('selectPalletesTypes');
+            $('#selectPalletesTypes').find('option').remove();
+
+            var jqxhr = $.getJSON(url, function (data) {
+                CPData = data;
+                CPData.forEach((element, i) => {
+                    var newOptionSelectPalletesTypes = document.createElement("option");
+                    newOptionSelectPalletesTypes.text = element.description;
+                    newOptionSelectPalletesTypes.value = element.id;
+                    selectPalletesTypes.add(newOptionSelectPalletesTypes);
+                    if (i === 0) {
+                        debugger;
+                        var nabBarColor = document.getElementById('nabBarColor');
+                        $('#nabBarColor').find('option').remove();
+
+                        var navBarTextColor = document.getElementById('navBarTextColor');
+                        $('#navBarTextColor').find('option').remove();
+
+                        var backgroundColor = document.getElementById('backgroundColor');
+                        $('#backgroundColor').find('option').remove();
+
+                        var backgroundTextColor = document.getElementById('backgroundTextColor');
+                        $('#backgroundTextColor').find('option').remove();
+
+                        element.colors.forEach((color, index) => {
+                            var navBarOption = document.createElement("option");
+                            navBarOption.text = color;
+                            navBarOption.style.backgroundColor = color;
+                            nabBarColor.add(navBarOption);
+
+                            var navBarTextOption = document.createElement("option");
+                            navBarTextOption.text = color;
+                            navBarTextOption.style.backgroundColor = color;
+                            navBarTextColor.add(navBarTextOption);
+
+                            var bgOption = document.createElement("option");
+                            bgOption.text = color;
+                            bgOption.style.backgroundColor = color;
+                            backgroundColor.add(bgOption);
+
+                            var bgTextOption = document.createElement("option");
+                            bgTextOption.text = color;
+                            bgTextOption.style.backgroundColor = color;
+                            backgroundTextColor.add(bgTextOption);
+                        });
+                    }
+                });
+            }).fail(function () {
+                console.log("Something went wrong;");
+            });
+        }
+
+        function selectPalletesTypesHandler(selectedValue) {
+            var element = CPData.find(x => x.id == selectedValue);
+            if (element) {
+                var nabBarColor = document.getElementById('nabBarColor');
+                $('#nabBarColor').find('option').remove();
+
+                var navBarTextColor = document.getElementById('navBarTextColor');
+                $('#navBarTextColor').find('option').remove();
+
+                var backgroundColor = document.getElementById('backgroundColor');
+                $('#backgroundColor').find('option').remove();
+
+                var backgroundTextColor = document.getElementById('backgroundTextColor');
+                $('#backgroundTextColor').find('option').remove();
+
+                element.colors.forEach((color, index) => {
+                    var navBarOption = document.createElement("option");
+                    navBarOption.text = color;
+                    navBarOption.style.backgroundColor = color;
+                    nabBarColor.add(navBarOption);
+
+                    var navBarTextOption = document.createElement("option");
+                    navBarTextOption.text = color;
+                    navBarTextOption.style.backgroundColor = color;
+                    navBarTextColor.add(navBarTextOption);
+
+                    var bgOption = document.createElement("option");
+                    bgOption.text = color;
+                    bgOption.style.backgroundColor = color;
+                    backgroundColor.add(bgOption);
+
+                    var bgTextOption = document.createElement("option");
+                    bgTextOption.text = color;
+                    bgTextOption.style.backgroundColor = color;
+                    backgroundTextColor.add(bgTextOption);
+                });
+            }
+        }
+
+        function applyColors() {
             var navBarColor = document.getElementById('navBarColor');
-            navBarColor.style.backgroundColor=document.getElementById('navBar').value;
+            navBarColor.style.backgroundColor = document.getElementById('nabBarColor').value;
 
             var navBarColor1 = document.getElementsByClassName('navbar-brand');
-            navBarColor1[0].style.setProperty("color", document.getElementById('navBarText').value, "important");
+            navBarColor1[0].style.setProperty("color", document.getElementById('navBarTextColor').value, "important");
 
             var navBarColor2 = document.getElementsByClassName('nav-link');
-            navBarColor2[0].style.setProperty("color", document.getElementById('navBarText').value, "important");
-            navBarColor2[1].style.setProperty("color", document.getElementById('navBarText').value, "important");
-            navBarColor2[2].style.setProperty("color", document.getElementById('navBarText').value, "important");
-            navBarColor2[3].style.setProperty("color", document.getElementById('navBarText').value, "important");
+            navBarColor2[0].style.setProperty("color", document.getElementById('navBarTextColor').value, "important");
+            navBarColor2[1].style.setProperty("color", document.getElementById('navBarTextColor').value, "important");
+            navBarColor2[2].style.setProperty("color", document.getElementById('navBarTextColor').value, "important");
+            navBarColor2[3].style.setProperty("color", document.getElementById('navBarTextColor').value, "important");
 
-            var bgColor = document.getElementById('bgColor');
-            bgColor.style.backgroundColor=document.getElementById('bg').value;
+            var bodyColor = document.getElementById('bodyColor');
+            bodyColor.style.backgroundColor = document.getElementById('backgroundColor').value;
 
-            var bgColor1 = document.getElementById('bgColor');
-            bgColor1.style.color=document.getElementById('bgText').value;
+            var bgColor1 = document.getElementById('bodyColor');
+            bgColor1.style.color = document.getElementById('backgroundTextColor').value;
         }
     </script>
 
