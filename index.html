@@ -8,14 +8,11 @@
     <link rel="stylesheet" href="assets/css/flat-ui.css" type="text/css">
     <link rel="stylesheet" href="assets/css/demo.css" type="text/css">
     <style>
-        select>option:focus {
-            border-radius: 50%;
-        }
     </style>
 </head>
 
-<body id="bodyColor">
-     <nav class="navbar navbar-expand-lg navbar-light" id="navBarColor" style="background-color: #fdfdfd;">
+<body id="bgColor">
+    <nav class="navbar navbar-expand-lg navbar-light" id="navBarColor" style="background-color: #fdfdfd;">
         <a class="navbar-brand" href="index.html">Flat Color</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,8 +25,8 @@
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
 
-                <li class="nav-item active">
-                    <a class="nav-link" href="demo.html">Demo Panel <span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="demo.html">Demo Panel <span class="sr-only"></span></a>
                 </li>
 
                 <li class="nav-item">
@@ -56,186 +53,32 @@
     </nav>
     <div class="container">
         <div class="form-row">
-            <strong><h4>Flat Design UI</h4></strong>
+            <h3><strong>Flat Design UI</h3></strong>
             <p>
-               Flat design is a user interface design style that uses simple, two-dimensional elements and bright colors.
-               Its popularity became prominent with the release of Windows 8, Apple’s iOS 7, and Google’s Material Design, all of which utilize flat design.
+            <strong> 
+                Flat design is a user interface design style that uses simple, two-dimensional elements and bright colors.
+                It is often contrasted to the skeuomorphic style that gives the illusion of three dimensions through copying real-life properties. 
+                Its popularity became prominent with the release of Windows 8, Apple’s iOS 7, and Google’s Material Design, all of which utilize flat design.
+            </strong>
             </p>
-        </div>
+        </div>        
         <hr>
-            <h4>Demo Panel</h4>
-            <p>
-               Here in this demo panel you can choose color from different <strong> color palettes </strong> and you can apply inorder to check
-               how your website looks like. You can select color for Navigation Bar, Text on the Navigation Bar, Content Background and Content Text.
-            </p>
-        <div class="form-row">
-            <div class="form-group col-md-3">
-                <label for="selectPalletes">Select Color Palettes</label>
-                <select class="form-control" id="selectPalletes" onchange="selectPalletesHandler(this.value)">
-                    <option value="1">International color Palettes</option>
-                    <option value="2">Flat color palletes</option>
-                </select>
-            </div>
-            <div class="form-group col-md-3">
-                <label for="selectPalletesTypes">Select Color Palettes Types</label>
-                <select class="form-control" id="selectPalletesTypes" onchange="selectPalletesTypesHandler(this.value)">
-                </select>
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-3">
-                <label for="nabBar">Navbar Color</label>
-                <select class="form-control" id="nabBarColor">
-                </select>
-            </div>
-            <div class="form-group col-md-3">
-                <label for="navBarTextColor">Navbar Text</label>
-                <select class="form-control" id="navBarTextColor">
-                </select>
-            </div>
-            <div class="form-group col-md-3">
-                <label for="backgroundColor">Background Color</label>
-                <select class="form-control" id="backgroundColor">
-                </select>
-            </div>
-            <div class="form-group col-md-3">
-                <label for="backgroundTextColor">Background Text</label>
-                <select class="form-control" id="backgroundTextColor">
-                </select>
-            </div>
-        </div>
-        <button type="button" class="btn btn-primary" onclick="applyColors()">Apply Color</button>
-        <a class="btn btn-danger" href="index.html">Reset</a>
-    </div>
+        <div class="container">
+            <div class="form-row">
+                <h3><strong>Flat Design UI</h3></strong>
+                <p>
+                <strong> 
+                    Flat design is a user interface design style that uses simple, two-dimensional elements and bright colors.
+                    It is often contrasted to the skeuomorphic style that gives the illusion of three dimensions through copying real-life properties. 
+                    Its popularity became prominent with the release of Windows 8, Apple’s iOS 7, and Google’s Material Design, all of which utilize flat design.
+                </strong>
+                </p>
+            </div> 
+
     <script src="assets/js/jquery-3.5.1.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/dom-to-image.min.js"></script>
     <script src="assets/js/FileSaver.min.js"></script>
-
-    <script>
-        var CPData = [];
-        var selectedCP = 1;
-        $(document).ready(function () {
-            selectPalletesHandler(1);
-        });
-
-        function selectPalletesHandler(selectedValue) {
-            var url = selectedValue == 1 ?
-                'https://raw.githubusercontent.com/prapoon/flat-UI/master/internationalCP.json'
-                : 'https://raw.githubusercontent.com/prapoon/flat-UI/master/flatcolor.json';
-
-            var selectPalletesTypes = document.getElementById('selectPalletesTypes');
-            $('#selectPalletesTypes').find('option').remove();
-
-            var jqxhr = $.getJSON(url, function (data) {
-                CPData = data;
-                CPData.forEach((element, i) => {
-                    var newOptionSelectPalletesTypes = document.createElement("option");
-                    newOptionSelectPalletesTypes.text = element.description;
-                    newOptionSelectPalletesTypes.value = element.id;
-                    selectPalletesTypes.add(newOptionSelectPalletesTypes);
-                    if (i === 0) {
-                        debugger;
-                        var nabBarColor = document.getElementById('nabBarColor');
-                        $('#nabBarColor').find('option').remove();
-
-                        var navBarTextColor = document.getElementById('navBarTextColor');
-                        $('#navBarTextColor').find('option').remove();
-
-                        var backgroundColor = document.getElementById('backgroundColor');
-                        $('#backgroundColor').find('option').remove();
-
-                        var backgroundTextColor = document.getElementById('backgroundTextColor');
-                        $('#backgroundTextColor').find('option').remove();
-
-                        element.colors.forEach((color, index) => {
-                            var navBarOption = document.createElement("option");
-                            navBarOption.text = color;
-                            navBarOption.style.backgroundColor = color;
-                            nabBarColor.add(navBarOption);
-
-                            var navBarTextOption = document.createElement("option");
-                            navBarTextOption.text = color;
-                            navBarTextOption.style.backgroundColor = color;
-                            navBarTextColor.add(navBarTextOption);
-
-                            var bgOption = document.createElement("option");
-                            bgOption.text = color;
-                            bgOption.style.backgroundColor = color;
-                            backgroundColor.add(bgOption);
-
-                            var bgTextOption = document.createElement("option");
-                            bgTextOption.text = color;
-                            bgTextOption.style.backgroundColor = color;
-                            backgroundTextColor.add(bgTextOption);
-                        });
-                    }
-                });
-            }).fail(function () {
-                console.log("Something went wrong;");
-            });
-        }
-
-        function selectPalletesTypesHandler(selectedValue) {
-            var element = CPData.find(x => x.id == selectedValue);
-            if (element) {
-                var nabBarColor = document.getElementById('nabBarColor');
-                $('#nabBarColor').find('option').remove();
-
-                var navBarTextColor = document.getElementById('navBarTextColor');
-                $('#navBarTextColor').find('option').remove();
-
-                var backgroundColor = document.getElementById('backgroundColor');
-                $('#backgroundColor').find('option').remove();
-
-                var backgroundTextColor = document.getElementById('backgroundTextColor');
-                $('#backgroundTextColor').find('option').remove();
-
-                element.colors.forEach((color, index) => {
-                    var navBarOption = document.createElement("option");
-                    navBarOption.text = color;
-                    navBarOption.style.backgroundColor = color;
-                    nabBarColor.add(navBarOption);
-
-                    var navBarTextOption = document.createElement("option");
-                    navBarTextOption.text = color;
-                    navBarTextOption.style.backgroundColor = color;
-                    navBarTextColor.add(navBarTextOption);
-
-                    var bgOption = document.createElement("option");
-                    bgOption.text = color;
-                    bgOption.style.backgroundColor = color;
-                    backgroundColor.add(bgOption);
-
-                    var bgTextOption = document.createElement("option");
-                    bgTextOption.text = color;
-                    bgTextOption.style.backgroundColor = color;
-                    backgroundTextColor.add(bgTextOption);
-                });
-            }
-        }
-
-        function applyColors() {
-            var navBarColor = document.getElementById('navBarColor');
-            navBarColor.style.backgroundColor = document.getElementById('nabBarColor').value;
-
-            var navBarColor1 = document.getElementsByClassName('navbar-brand');
-            navBarColor1[0].style.setProperty("color", document.getElementById('navBarTextColor').value, "important");
-
-            var navBarColor2 = document.getElementsByClassName('nav-link');
-            navBarColor2[0].style.setProperty("color", document.getElementById('navBarTextColor').value, "important");
-            navBarColor2[1].style.setProperty("color", document.getElementById('navBarTextColor').value, "important");
-            navBarColor2[2].style.setProperty("color", document.getElementById('navBarTextColor').value, "important");
-            navBarColor2[3].style.setProperty("color", document.getElementById('navBarTextColor').value, "important");
-
-            var bodyColor = document.getElementById('bodyColor');
-            bodyColor.style.backgroundColor = document.getElementById('backgroundColor').value;
-
-            var bgColor1 = document.getElementById('bodyColor');
-            bgColor1.style.color = document.getElementById('backgroundTextColor').value;
-        }
-    </script>
-
 </body>
 
 </html>
