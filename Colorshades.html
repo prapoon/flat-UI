@@ -82,7 +82,7 @@
 
     <script>
         $(document).ready(function () {
-            var jqxhr = $.getJSON("internationalCP.json", function (data) {
+            var jqxhr = $.getJSON("colorshades.json", function (data) {
                 var div = document.getElementById('color');
                 data.forEach((element, i) => {
                     var colorDiv = '<div class="row" id="' + i + '" data-toggle="modal" data-target="#exampleModal">';
