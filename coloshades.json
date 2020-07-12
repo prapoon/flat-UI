@@ -1,97 +1,97 @@
 [{
     "id": 1,
-    "description":"British Palette V1",
+    "description":"Blue Color shades",
     "colors": [
-        "#00a8ff",
-        "#0097e6",
-        "#9c88ff",
-        "#8c7ae6",
-        "#fbc531",
-        "#e1b12c",
-        "#4cd137",
-        "#44bd32",
-        "#487eb0",
-        "#40739e"
+        "#00001a",
+        "#00004d",
+        "#000080",
+        "#0000b3",
+        "#0000e6",
+        "#1a1aff",
+        "#4d4dff",
+        "#8080ff",
+        "#b3b3ff",
+        "#e5e5ff"
       ]
 },
 {
     "id": 2,
-    "description":"British Palette V2",
+    "description":"Red Color Shades",
     "colors": [
-        "#e84118",
-        "#c23616",
-        "#f5f6fa",
-        "#dcdde1",
-        "#7f8fa6",
-        "#718093",
-        "#273c75",
-        "#192a56",
-        "#353b48",
-        "#2f3640"
+        "#1a0000",
+        "#4d0000",
+        "#800000",
+        "#b30000",
+        "#e60000",
+        "#ff1a1a",
+        "#ff4d4d",
+        "#ff8080",
+        "#ffb3b3",
+        "#ffe5e5"
       ]
 },
 {
     "id": 3,
-    "description":"Canadian Color Palette V1",
+    "description":"Green Color Shades",
     "colors": [
-        "#ff9ff3",
-        "#f368e0",
-        "#feca57",
-        "#ff9f43",
-        "#ff6b6b",
-        "#ee5253",
-        "#48dbfb",
-        "#0abde3",
-        "#1dd1a1",
-        "#10ac84"
+        "#001a00",
+        "#004d00",
+        "#008000",
+        "#00b300",
+        "#00e600",
+        "#1aff1a",
+        "#4dff4d",
+        "#80ff80",
+        "#b3ffb3",
+        "#e5ffe5"
       ]
 },
 {
   "id": 4,
-  "description":"Canadian Color Palette V2",
+  "description":"Brown Color Shades",
   "colors": [
-      "#00d2d3",
-      "#01a3a4",
-      "#54a0ff",
-      "#2e86de",
-      "#5f27cd",
-      "#341f97",
-      "#c8d6e5",
-      "#8395a7",
-      "#576574",
-      "#222f3e"
+      "#140505",
+      "#3d1010",
+      "#661a1a",
+      "#8e2424",
+      "#b72f2f",
+      "#d04848",
+      "#db7171",
+      "#e59999",
+      "#efc2c2",
+      "#faebeb"
     ]
 },
 {
   "id": 5,
-  "description":"Chinese Color Palette V1",
+  "description":"Yellow Color Shades",
   "colors": [
-      "#eccc68",
-      "#ffa502",
-      "#ff7f50",
-      "#ff6348",
-      "#ff6b81",
-      "#ff4757",
-      "#a4b0be",
-      "#747d8c",
-      "#57606f",
-      "#2f3542"
+      "#191a00",
+      "#4c4d00",
+      "#7f8000",
+      "#b2b300",
+      "#e5e600",
+      "#ffff1a",
+      "#ffff4d",
+      "#ffff80",
+      "#ffffb3",
+      "#ffffe5"
     ]
 },
 {
   "id": 6,
-  "description":"Chinese Color Palette V2",
+  "description":"Purple Color Shades",
   "colors": [
-      "#7bed9f",
-      "#2ed573",
-      "#70a1ff",
-      "#1e90ff",
-      "#5352ed",
-      "#3742fa",
-      "#ffffff",
-      "#f1f2f6",
-      "#dfe4ea",
-      "#ced6e0"
+      "#1a0019",
+      "#4d004c",
+      "#80007f",
+      "#b300b2",
+      "#e600e5",
+      "#ff1aff",
+      "#ff4dff",
+      "#ff80ff",
+      "#ffb3ff",
+      "#ffe5ff"
     ]
 }
 ]
