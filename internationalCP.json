@@ -136,5 +136,14 @@
       "#dfe4ea",
       "#ced6e0"
     ]
+},
+    {
+  "id":9,
+  "description":"prajit flat colors",
+  "colors": [
+      "#6fc7bf",
+      "#ffffff",
+      "#000000"
+    ]
 }
 ]
