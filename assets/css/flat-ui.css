@@ -4475,39 +4475,11 @@ fieldset[disabled] .input-group-btn .btn-default.active {
   }
 }
 
-.navbar-toggler {
-  border: none;
-  color: #34495e;
-  margin: 0 0 0 21px;
-  padding: 0 21px;
-  height: 53px;
-  line-height: 53px;
-  background: none;
-}
 
-.navbar-toggler:before {
-  color: #16a085;
-  content: "\e61a";
-  font-family: "Flat-UI-Pro-Icons";
-  font-size: 22px;
-  font-style: normal;
-  font-weight: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transition: color .25s linear;
-}
 
-.navbar-toggler:hover, .navbar-toggler:focus {
-  outline: none;
-}
 
-.navbar-toggler:hover:before, .navbar-toggler:focus:before {
-  color: #1abc9c;
-}
 
-.navbar-toggler .icon-bar {
-  display: none;
-}
+
 
 .navbar-nav {
   margin: 0;
