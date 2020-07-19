@@ -103,7 +103,7 @@ ol.linenums {
 }
 .demo-logo .logo {
   background: url(../images/icons/flat3.png) center 0 no-repeat;
- background-size:250px 280px;
+  background-size:250px 280px;
   height: 280px;
   margin: 0 auto 10px;
   overflow: hidden;
