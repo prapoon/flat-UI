@@ -103,12 +103,12 @@ ol.linenums {
 }
 .demo-logo .logo {
   background: url(../images/icons/flat3.png) center 0 no-repeat;
-  background-size: 600px 200px;
-  height: 200px;
+ background-size:250px 280px;
+  height: 280px;
   margin: 0 auto 10px;
   overflow: hidden;
   text-indent: -9999em;
-  width: 400px;
+  width: 1000px;
 }
 .demo-logo small {
   color: rgba(52, 73, 94, 0.3);
