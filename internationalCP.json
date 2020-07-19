@@ -42,7 +42,39 @@
       ]
     },
     {
-    "id": 3,
+      "id":3,
+      "description":"American Color Palette V1",
+      "colors": [
+          "#55efc4",
+          "#00b894",
+          "#81ecec",
+          "#00cec9",
+          "#74b9ff",
+          "#0984e3",
+          "#a29bfe",
+          "#6c5ce7",
+          "#dfe6e9",
+          "#b2bec3"
+        ]
+    },
+    {
+      "id":4,
+      "description":"American Color Palette V2",
+      "colors": [
+          "#ffeaa7",
+          "#fdcb6e",
+          "#fab1a0",
+          "#e17055",
+          "#ff7675",
+          "#d63031",
+          "#fd79a8",
+          "#e84393",
+          "#636e72",
+          "#2d3436"
+        ]
+    },
+    {
+    "id": 5,
     "description":"British Palette V1",
     "colors": [
         "#00a8ff",
@@ -58,7 +90,7 @@
       ]
 },
 {
-    "id": 4,
+    "id": 6,
     "description":"British Palette V2",
     "colors": [
         "#e84118",
@@ -74,7 +106,7 @@
       ]
 },
 {
-    "id": 5,
+    "id": 7,
     "description":"Canadian Color Palette V1",
     "colors": [
         "#ff9ff3",
@@ -90,7 +122,7 @@
       ]
 },
 {
-  "id": 6,
+  "id": 8,
   "description":"Canadian Color Palette V2",
   "colors": [
       "#00d2d3",
@@ -106,7 +138,7 @@
     ]
 },
 {
-  "id": 7,
+  "id": 9,
   "description":"Chinese Color Palette V1",
   "colors": [
       "#eccc68",
@@ -122,7 +154,7 @@
     ]
 },
 {
-  "id":8,
+  "id":10,
   "description":"Chinese Color Palette V2",
   "colors": [
       "#7bed9f",
@@ -137,17 +169,267 @@
       "#ced6e0"
     ]
 },
-    {
-  "id":9,
+{
+  "id":11,
+  "description":"Dutch Color Palette V1",
+  "colors": [
+      "#FFC312",
+      "#F79F1F",
+      "#EE5A24",
+      "#EA2027",
+      "#C4E538",
+      "#009432",
+      "#009432",
+      "#006266",
+      "#12CBC4",
+      "#1289A7"
+    ]
+},
+{
+  "id":12,
+  "description":"Dutch Color Palette V2",
+  "colors": [
+      "#0652DD",
+      "#1B1464",
+      "#FDA7DF",
+      "#D980FA",
+      "#9980FA",
+      "#5758BB",
+      "#ED4C67",
+      "#B53471",
+      "#833471",
+      "#6F1E51"
+    ]
+},
+{
+  "id":13,
+  "description":"French Color Palette V1",
+  "colors": [
+      "#fad390",
+      "#f8c291",
+      "#fa983a",
+      "#f6b93b",
+      "#e58e26",
+      "#e55039",
+      "#eb2f06",
+      "#b71540",
+      "#6a89cc",
+      "#4a69bd"
+    ]
+},
+{
+  "id":14,
+  "description":"French Color Palette V2",
+  "colors": [
+      "#1e3799",
+      "#0c2461",
+      "#82ccdd",
+      "#60a3bc",
+      "#3c6382",
+      "#0a3d62",
+      "#b8e994",
+      "#78e08f",
+      "#38ada9",
+      "#079992"
+    ]
+},
+{
+  "id":15,
+  "description":"German Color Palette V1",
+  "colors": [
+      "#fc5c65",
+      "#eb3b5a",
+      "#fd9644",
+      "#fa8231",
+      "#fed330",
+      "#f7b731",
+      "#26de81",
+      "#20bf6b",
+      "#2bcbba",
+      "#0fb9b1"
+    ]
+},
+{
+  "id":16,
+  "description":"German Color Palette V2",
+  "colors": [
+      "#45aaf2",
+      "#2d98da",
+      "#4b7bec",
+      "#3867d6",
+      "#a55eea",
+      "#8854d0",
+      "#d1d8e0",
+      "#a5b1c2",
+      "#778ca3",
+      "#4b6584"
+    ]
+},
+{
+  "id":17,
+  "description":"Indian Color Palette V1",
+  "colors": [
+      "#FEA47F",
+      "#F97F51",
+      "#B33771",
+      "#6D214F",
+      "#25CCF7",
+      "#1B9CFC",
+      "#3B3B98",
+      "#182C61",
+      "#EAB543",
+      "#F8EFBA"
+    ]
+},
+{
+  "id":18,
+  "description":"Indian Color Palette V2",
+  "colors": [
+      "#FD7272",
+      "#FC427B",
+      "#55E6C1",
+      "#58B19F",
+      "#9AECDB",
+      "#BDC581",
+      "#CAD3C8",
+      "#2C3A47",
+      "#D6A2E8",
+      "#82589F"
+    ]
+},
+{
+  "id":19,
+  "description":"Russian Color Palette V1",
+  "colors": [
+      "#f3a683",
+      "#f19066",
+      "#786fa6",
+      "#574b90",
+      "#f7d794",
+      "#f5cd79",
+      "#f8a5c2",
+      "#f78fb3",
+      "#778beb",
+      "#546de5"
+    ]
+},
+{
+  "id":20,
+  "description":"Russian Color Palette V2",
+  "colors": [
+      "#63cdda",
+      "#3dc1d3",
+      "#e77f67",
+      "#e15f41",
+      "#ea8685",
+      "#e66767",
+      "#cf6a87",
+      "#c44569",
+      "#596275",
+      "#303952"
+    ]
+},
+{
+  "id":21,
+  "description":"Spanish Color Palette V1",
+  "colors": [
+      "#40407a",
+      "#2c2c54",
+      "#706fd3",
+      "#474787",
+      "#ff5252",
+      "#b33939",
+      "#ff793f",
+      "#cd6133",
+      "#ffb142",
+      "#cc8e35"
+    ]
+},
+{
+  "id":22,
+  "description":"Spanish Color Palette V2",
+  "colors": [
+      "#ffda79",
+      "#ccae62",
+      "#f7f1e3",
+      "#aaa69d",
+      "#d1ccc0",
+      "#84817a",
+      "#34ace0",
+      "#227093",
+      "#33d9b2",
+      "#218c74"
+    ]
+},
+{
+  "id":23,
+  "description":"Turkish Color Palette V1",
+  "colors": [
+      "#cd84f1",
+      "#c56cf0",
+      "#ffcccc",
+      "#ffb8b8",
+      "#ff4d4d",
+      "#ff3838",
+      "#ffaf40",
+      "#ff9f1a",
+      "#fffa65",
+      "#fff200"
+    ]
+},
+{
+  "id":24,
+  "description":"Turkish Color Palette V2",
+  "colors": [
+      "#32ff7e",
+      "#3ae374",
+      "#7efff5",
+      "#67e6dc",
+      "#18dcff",
+      "#17c0eb",
+      "#7d5fff",
+      "#7158e2",
+      "#4b4b4b",
+      "#3d3d3d"
+    ]
+},
+{
+  "id":25,
+  "description":"Nepalese Color Palette V1",
+  "colors": [
+      "#000000",
+      "#2F4E6F",
+      "#98B1C4",
+      "#C8D7E3",
+      "#E15119",
+      "#CCCCCC",
+      "#213240",
+      "#90AEC6"
+    ]
+},
+{
+  "id":26,
+  "description":"Nepalese Color Palette V2",
+  "colors": [
+      "#10C8CD",
+      "#EC1559",
+      "#FAF93C",
+      "#37241E",
+      "#94B3C8",
+      "#4D4E24",
+      "#BD8025",
+      "#816A4A"
+    ]
+},
+{
+  "id":27,
   "description":"prajit flat colors",
   "colors": [
       "#6fc7bf",
       "#ffffff",
       "#000000",
-      "#fdfdfd",
-      "#231f20",
-      "#6fb1ce",
-      "#d1d3d4"
+      "#4b4b4b",
+      "#3d3d3d"
     ]
 }
 ]
