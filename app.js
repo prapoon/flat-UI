@@ -1,14 +1,10 @@
-
-//service worker registration
+if(!window.Promise){
+	window.Promise=Promise;
+}
 if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-    //service worker file is at the root of the domain
-    navigator.serviceWorker.register('/sworkers.js').then(function(registration) {
-    // If registration was successful
-    console.log('ServiceWorker registration successful');
-    }, function(err) {
-    // If registration fails
-    console.log('ServiceWorker registration failed');
+  navigator.serviceWorker
+    .register('swork.js')
+    .then(function() {
+      console.log('Service worker registered!');
     });
-    });
-    }
+}
